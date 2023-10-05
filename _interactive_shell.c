@@ -4,7 +4,7 @@
  * interactive_shell - interactive_shell
  * Return: none
  */
-void interactive_shell()
+void interactive_shell(void)
 {
 	char *commands_ptr;
 	size_t n = 0;

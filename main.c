@@ -11,7 +11,7 @@ int main(int ac, char **av)
 {
 	(void)ac;
 	(void)av;
-	
+
 	if (ac >= 2)
 	{
 		/* run shell in non interactive mode*/

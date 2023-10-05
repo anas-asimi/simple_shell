@@ -14,8 +14,8 @@ int _putchar(char c)
 }
 
 /**
- * _print_string - writes the string c to stdout
- * @c: The string to print
+ * print_string - writes the string c to stdout
+ * @s: The string to print
  *
  * Return: On success number of printed characters.
  * On error: NULL

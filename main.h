@@ -22,6 +22,6 @@ int _strlen(char *s);
 char *_strcpy(char *src);
 
 /* shell*/
-void interactive_shell();
+void interactive_shell(void);
 
 #endif

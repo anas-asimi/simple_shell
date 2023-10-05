@@ -10,4 +10,4 @@
 - [Building a simple shell in C - Part 1](https://blog.ehoneahobed.com/building-a-simple-shell-in-c-part-1)
 - [Building a simple shell in C - Part 2](https://blog.ehoneahobed.com/building-a-simple-shell-in-c-part-2)
 - [Building a simple shell in C - Part 3](https://blog.ehoneahobed.com/building-a-simple-shell-in-c-part-3)
-- [Building a simple shell in C - Part 41](https://blog.ehoneahobed.com/building-a-simple-shell-in-c-part-4)
+- [Building a simple shell in C - Part 4](https://blog.ehoneahobed.com/building-a-simple-shell-in-c-part-4)

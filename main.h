@@ -22,6 +22,7 @@ int print_unsigned_int(unsigned long int n);
 int _strlen(char *s);
 int _strlen_deli(char *s, char deli);
 char *_strcpy(char *src);
+char *_strcpy_from_to(char *src, int start, int end);
 
 /* shell*/
 int interactive_shell(void);

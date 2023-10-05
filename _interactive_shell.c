@@ -11,7 +11,7 @@ void interactive_shell()
 
 	while (1)
 	{
-		print_string("hello bro $");
+		print_string("#cisfun$ ");
 		getline(&commands_ptr, &n, stdin);
 		print_string(commands_ptr);
 	}

@@ -24,7 +24,7 @@ int _strlen_deli(char *s, char deli)
 {
 	int length = 0;
 
-	while (s[length])
+	while (s[length] && s[length] != deli)
 		length++;
 	return (length);
 }
@@ -102,12 +102,13 @@ char **_strsplit(char *str, char deli)
 	current_string_index = 0;
 	while (1)
 	{
-		if (current_string_index > total_of_strings)
+		if (current_string_index >= total_of_strings)
 			break;
 		current_string_len = _strlen_deli(str + current_index, deli);
 		array[current_string_index] = _strcpy_from_to(str, current_index, current_index + current_string_len);
 		current_index += current_string_len + 1;
 		current_string_index++;
 	}
+	array[current_string_index] = NULL;
 	return (array);
 }

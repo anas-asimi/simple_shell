@@ -15,10 +15,9 @@ int interactive_shell(void)
 	{
 		print_string("#cisfun$ ");
 		getline(&commands_ptr, &number_of_chars, stdin);
-		if (number_of_chars < 0)
-			return (-1);
 		token = _strsplit(commands_ptr, delim);
 		print_string(token[0]);
+		print_string("\n");
 	}
 	return (0);
 }

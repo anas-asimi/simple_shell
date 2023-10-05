@@ -2,17 +2,25 @@
 
 /**
  * interactive_shell - interactive_shell
- * Return: none
+ * Return: int
  */
-void interactive_shell(void)
+int interactive_shell(void)
 {
 	char *commands_ptr;
-	size_t n = 0;
+	char *commands_ptr_copy;
+	const char *delim = " ";
+	size_t number_of_chars = 0;
 
 	while (1)
 	{
 		print_string("#cisfun$ ");
-		getline(&commands_ptr, &n, stdin);
-		print_string(commands_ptr);
+		getline(&commands_ptr, &number_of_chars, stdin);
+		if (number_of_chars == -1)
+			return (-1);
+		commands_ptr_copy = _strcpy(commands_ptr);
+		print_string(commands_ptr_copy);
+		free(commands_ptr_copy);
+		free(commands_ptr);
 	}
+	return (0);
 }

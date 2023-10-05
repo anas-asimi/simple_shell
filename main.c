@@ -9,6 +9,8 @@
  */
 int main(int ac, char **av)
 {
+	int status;
+
 	(void)ac;
 	(void)av;
 
@@ -18,7 +20,7 @@ int main(int ac, char **av)
 	}
 	else
 	{
-		interactive_shell();
+		status = interactive_shell();
 	}
-	return (EXIT_SUCCESS);
+	return (status);
 }

@@ -6,6 +6,7 @@
 #include <limits.h>
 #include <stdint.h>
 */
+#include <string.h>
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -19,9 +20,10 @@ int print_unsigned_int(unsigned long int n);
 
 /* strings */
 int _strlen(char *s);
+int _strlen_deli(char *s, char deli);
 char *_strcpy(char *src);
 
 /* shell*/
-void interactive_shell(void);
+int interactive_shell(void);
 
 #endif

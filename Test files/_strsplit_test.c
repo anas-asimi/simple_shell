@@ -1,4 +1,5 @@
 #include "../main.h"
+#include "../_strings_functions.c"
 
 int main()
 {

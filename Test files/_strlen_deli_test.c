@@ -1,16 +1,13 @@
 #include "../main.h"
+#include "../_strings_functions.c"
 
 int main()
 {
 	/* testing _strlen_deli */
-	print_number(_strlen_deli("123456", ' '));
-	_putchar('\n');
-	print_number(_strlen_deli("123456 ", ' '));
-	_putchar('\n');
-	print_number(_strlen_deli("123 456 ", ' '));
-	_putchar('\n');
-	print_number(_strlen_deli("123 456 " + 1, ' '));
-	_putchar('\n');
+	printf("%d\n",_strlen_deli("123456", ' '));
+	printf("%d\n",_strlen_deli("123456 ", ' '));
+	printf("%d\n",_strlen_deli("123 456 ", ' '));
+	printf("%d\n",_strlen_deli("123 456 " + 1, ' '));
 
 	/* end */
 	return (1);

@@ -1,3 +1,5 @@
 .vscode
+# ignore executable files
 *.exe
 *.out
+shell

@@ -14,13 +14,11 @@ int _strlen(char *s)
 	return (length);
 }
 
-
 /**
  * *_strcpy - function that return copies of the string.
  * @src: source.
  * Return: copy of the string.
  */
-
 char *_strcpy(char *src)
 {
 	int len, i = 0;
@@ -42,7 +40,6 @@ char *_strcpy(char *src)
  * @s: string.
  * Return: pointer to array of char pointers.
  */
-
 char **_strsplit(char *str, const char *delim)
 {
 	int i, total_of_strings;
@@ -74,5 +71,7 @@ char **_strsplit(char *str, const char *delim)
 		token = strtok(NULL, delim);
 	}
 	array[i] = NULL;
+	free(srt_copy1);
+	free(srt_copy2);
 	return (array);
 }

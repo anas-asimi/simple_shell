@@ -1,0 +1,11 @@
+ int pid = fork();
+
+ if (pid == 0)
+ {
+     printf("I'm the child");
+ }
+ else
+ {
+     printf("I'm the parent, my child is %i", pid);
+     // here we can kill the child, but that's not very parently of us
+ }

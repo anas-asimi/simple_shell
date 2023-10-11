@@ -9,13 +9,14 @@ int main()
 
 	/* testing _strsplit */
 	string = "hello world its me";
-	array = _strsplit(string, ' ');
+	array = _strsplit(string, " ");
 
-	for (i = 0; i < 5; i++)
+	for (i = 0;; i++)
 	{
 		printf("pointer in index %d is	: %p\n", i, array[i]);
 		printf("string in index %d is	: %s\n", i, array[i]);
+		if (array[i] == NULL)
+			break;
 	}
-	/* end */
 	return (1);
 }

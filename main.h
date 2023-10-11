@@ -20,10 +20,8 @@ int print_unsigned_int(unsigned long int n);
 
 /* strings */
 int _strlen(char *s);
-int _strlen_deli(char *s, char deli);
 char *_strcpy(char *src);
-char *_strcpy_from_to(char *src, int start, int end);
-char **_strsplit(char *str, char deli);
+char **_strsplit(char *str, const char *delim);
 
 /* shell*/
 int interactive_shell(void);

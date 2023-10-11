@@ -8,8 +8,9 @@ int main()
 	int i;
 
 	/* testing _strsplit */
-	string = "hello world its me";
-	array = _strsplit(string, " ");
+	string = getenv("PATH");
+	;
+	array = _strsplit(string, ";");
 
 	for (i = 0;; i++)
 	{

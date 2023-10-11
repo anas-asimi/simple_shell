@@ -7,17 +7,18 @@
 int interactive_shell(void)
 {
 	char *commands_ptr;
-	char **token;
-	char delim = ' ';
-	size_t number_of_chars = 0;
+	char **array_of_strings;
+	size_t number_of_chars , n;
 
+	n = 0;
 	while (1)
 	{
 		print_string("#cisfun$ ");
-		getline(&commands_ptr, &number_of_chars, stdin);
-		token = _strsplit(commands_ptr, delim);
-		print_string(token[0]);
-		print_string("\n");
+		number_of_chars = getline(&commands_ptr, &n, stdin);
+		if (number_of_chars == -1)
+			return (-1);
+		array_of_strings = _strsplit(commands_ptr, " ");
+		printf("number_of_chars : %ld\n", number_of_chars);
 	}
 	return (0);
 }

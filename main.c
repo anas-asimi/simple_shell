@@ -13,20 +13,15 @@ int main(int ac, char **av)
 	char *command;
 
 	(void)ac;
-	(void)av;
 
 	if (ac >= 2)
 	{
 		/* run shell in non interactive mode*/
 		command = _strconcat(av + 1, " ");
-		print_string("command is : ");
-		print_string(command);
-		print_string("\n");
+		printf("command is : %s\n", command);
 		status = 1;
 	}
 	else
-	{
 		status = interactive_shell();
-	}
 	return (status);
 }

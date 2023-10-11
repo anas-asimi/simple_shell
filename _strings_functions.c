@@ -37,7 +37,7 @@ char *_strcpy(char *src)
 
 /**
  * *_strsplit - function that split a string.
- * @s: string.
+ * @str: string.
  * @delim: delim.
  * Return: pointer to array of char pointers.
  */
@@ -79,7 +79,7 @@ char **_strsplit(char *str, const char *delim)
 
 /**
  * *_strconcat - function that concatenate list of strings.
- * @s: array of strings.
+ * @array_of_strings: array of strings.
  * @delim: delim.
  * Return: pointer to string.
  */

@@ -8,7 +8,7 @@ int interactive_shell(void)
 {
 	char *commands_ptr;
 	char **array_of_strings;
-	size_t number_of_chars , n;
+	size_t number_of_chars, n;
 
 	n = 0;
 	while (1)

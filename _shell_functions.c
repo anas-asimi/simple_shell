@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * _strlen - returns length os string.
- * @s: string to evaluate
+ * get_location - get location of command.
+ * @command: command
  * Return: int.
  */
 char *get_location(char *command)

@@ -22,6 +22,7 @@ int print_unsigned_int(unsigned long int n);
 int _strlen(char *s);
 char *_strcpy(char *src);
 char **_strsplit(char *str, const char *delim);
+char *_strconcat(char **array_of_strings, const char *delim);
 
 /* shell*/
 int interactive_shell(void);

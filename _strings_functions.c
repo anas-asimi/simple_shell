@@ -38,6 +38,7 @@ char *_strcpy(char *src)
 /**
  * *_strsplit - function that split a string.
  * @s: string.
+ * @delim: delim.
  * Return: pointer to array of char pointers.
  */
 char **_strsplit(char *str, const char *delim)
@@ -74,4 +75,45 @@ char **_strsplit(char *str, const char *delim)
 	free(srt_copy1);
 	free(srt_copy2);
 	return (array);
+}
+
+/**
+ * *_strconcat - function that concatenate list of strings.
+ * @s: array of strings.
+ * @delim: delim.
+ * Return: pointer to string.
+ */
+char *_strconcat(char **array_of_strings, const char *delim)
+{
+	int full_length, i, j, x;
+	char *str;
+
+	full_length = 0;
+	for (i = 0; array_of_strings[i]; i++)
+	{
+		for (j = 0; array_of_strings[i][j]; j++)
+		{
+			full_length++;
+		}
+	}
+	full_length += ((i - 1) * _strlen((char *)delim));
+
+	str = malloc(sizeof(char) * (full_length + 1));
+	if (str == NULL)
+		return (NULL);
+
+	x = 0;
+	for (i = 0; array_of_strings[i]; i++)
+	{
+		for (j = 0; array_of_strings[i][j]; j++)
+		{
+			str[x++] = array_of_strings[i][j];
+		}
+		for (j = 0; delim[j]; j++)
+		{
+			str[x++] = delim[j];
+		}
+	}
+	str[full_length] = '\0';
+	return (str);
 }

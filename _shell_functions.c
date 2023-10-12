@@ -5,6 +5,24 @@
  * @command: command
  * Return: int.
  */
+char *read_line(void)
+{
+	char *line;
+	size_t number_of_chars, n;
+
+	line = NULL;
+	n = 0;
+	number_of_chars = getline(&line, &n, stdin);
+	if (number_of_chars == -1)
+		return (NULL);
+	return (line);
+}
+
+/**
+ * get_location - get location of command.
+ * @command: command
+ * Return: int.
+ */
 char *get_location(char *command)
 {
 	char *path, *path_copy, *path_token, *file_path;

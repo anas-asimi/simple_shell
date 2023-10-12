@@ -6,19 +6,17 @@
  */
 int interactive_shell(void)
 {
-	char *commands_ptr;
-	char **array_of_strings;
-	size_t number_of_chars, n;
+	char *line;
+	char **tokens;
 
-	n = 0;
 	while (1)
 	{
 		print_string("#cisfun$ ");
-		number_of_chars = getline(&commands_ptr, &n, stdin);
-		if (number_of_chars == -1)
-			return (-1);
-		array_of_strings = _strsplit(commands_ptr, " ");
-		printf("number_of_chars : %ld\n", number_of_chars);
+		line = read_line();
+		if (line == NULL)
+			break;
+		tokens = _strsplit(line, " ");
+		print_string(tokens[0]);
 	}
 	return (0);
 }

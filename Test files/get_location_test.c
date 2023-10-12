@@ -9,11 +9,7 @@ int main()
 	/* testing _strsplit */
 	string = get_location("gcc");
 	if (string == NULL)
-	{
 		printf("command not found");
-	}
-	
 	printf("command is : %s\n", string);
-
 	return (1);
 }

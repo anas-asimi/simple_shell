@@ -52,7 +52,6 @@ char *_get_location(char *command)
 			path_token = strtok(NULL, ":");
 		}
 	}
-	free(path);
 	if (stat(command, &buffer) == 0)
 	{
 		return (command);
@@ -74,18 +73,17 @@ int run_command(char **token)
 	if (location == NULL)
 		return (1);
 
-	printf("%s\n", location);
 	pid = fork();
 	if (pid == 0)
 	{
-		printf("I'm the child");
+		printf("I'm the child\n");
 		/*
 		execve(location, token + 1);
 		*/
 	}
 	else
 	{
-		printf("I'm the parent, my child is %i", pid);
+		printf("I'm the parent\n");
 		/*
 		wait();
 		*/

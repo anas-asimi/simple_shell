@@ -30,7 +30,6 @@ int main(int ac, char **av)
 			line = read_line();
 			if (line == NULL)
 				break;
-
 			tokens = _strsplit(line, " ");
 			status = run_command(tokens);
 			if (status == 1)

@@ -30,6 +30,6 @@ char *_strconcat(char **array_of_strings, const char *delim);
 /* shell*/
 char *_get_location(char *command);
 char *read_line(void);
-int run_command(char *command);
+int run_command(char **token);
 
 #endif

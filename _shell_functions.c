@@ -14,7 +14,10 @@ char *read_line(void)
 	n = 0;
 	number_of_chars = getline(&line, &n, stdin);
 	if (number_of_chars == -1)
+	{
+		free(line);
 		return (NULL);
+	}
 	return (line);
 }
 
@@ -41,14 +44,22 @@ char *get_location(char *command)
 			directory_length = _strlen(path_token);
 			file_path = malloc(command_length + directory_length + 2);
 			if (file_path == NULL)
+			{
+				free(path);
+				free(path_copy);
+				free(path_token);
+				free(file_path);
 				return (NULL);
+			}
 			array_of_strings[0] = path_token;
 			array_of_strings[1] = command;
 			array_of_strings[2] = NULL;
 			file_path = _strconcat(array_of_strings, "/");
 			if (stat(file_path, &buffer) == 0)
 			{
+				free(path);
 				free(path_copy);
+				free(path_token);
 				return (file_path);
 			}
 			else
@@ -57,6 +68,7 @@ char *get_location(char *command)
 				path_token = strtok(NULL, ":");
 			}
 		}
+		free(path);
 		free(path_copy);
 		if (stat(command, &buffer) == 0)
 		{
@@ -64,5 +76,6 @@ char *get_location(char *command)
 		}
 		return (NULL);
 	}
+	free(path);
 	return (NULL);
 }

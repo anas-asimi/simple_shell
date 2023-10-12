@@ -17,6 +17,7 @@ int interactive_shell(void)
 			break;
 		tokens = _strsplit(line, " ");
 		print_string(tokens[0]);
+		free(line);
 	}
 	return (0);
 }

@@ -27,6 +27,6 @@ char **_strsplit(char *str, const char *delim);
 char *_strconcat(char **array_of_strings, const char *delim);
 
 /* shell*/
-int interactive_shell(void);
+char *read_line(void);
 
 #endif

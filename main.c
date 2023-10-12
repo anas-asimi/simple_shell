@@ -11,6 +11,8 @@ int main(int ac, char **av)
 {
 	int status;
 	char *command;
+	char *line;
+	char **tokens;
 
 	(void)ac;
 
@@ -22,6 +24,17 @@ int main(int ac, char **av)
 		status = 1;
 	}
 	else
-		status = interactive_shell();
+	{
+		while (1)
+		{
+			print_string("#cisfun$ ");
+			line = read_line();
+			if (line == NULL)
+				break;
+			tokens = _strsplit(line, " ");
+			print_string(tokens[0]);
+			free(line);
+		}
+	}
 	return (status);
 }

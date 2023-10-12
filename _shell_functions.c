@@ -1,9 +1,8 @@
 #include "main.h"
 
 /**
- * get_location - get location of command.
- * @command: command
- * Return: int.
+ * read_line - read input.
+ * Return: string.
  */
 char *read_line(void)
 {

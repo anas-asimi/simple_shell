@@ -20,9 +20,9 @@ int main(int ac, char **av)
 	{
 		/* run shell in non interactive mode*/
 		command = _strconcat(av + 1, " ");
-		(void)command;
-		print_err_1(av[0], av[1]);
-		status = 1;
+		status = run_command(command);
+		if (status == 1)
+			print_err(av[0], av[1]);
 	}
 	else
 	{
@@ -32,10 +32,14 @@ int main(int ac, char **av)
 			line = read_line();
 			if (line == NULL)
 				break;
+
 			tokens = _strsplit(line, " ");
-			print_string(tokens[0]);
+			status = run_command(line);
+			if (status == 1)
+				print_err(av[0], tokens[0]);
 			free(line);
 		}
 	}
+	_putchar('\n');
 	return (status);
 }

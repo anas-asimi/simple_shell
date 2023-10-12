@@ -59,3 +59,14 @@ char *_get_location(char *command)
 	}
 	return (NULL);
 }
+
+/**
+ * run_command - run command.
+ * @command: command
+ * Return: int.
+ */
+int run_command(char *command)
+{
+	print_string(command);
+	return (0);
+}

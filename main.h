@@ -19,6 +19,7 @@ int _putchar(char c);
 int print_string(char *s);
 int print_number(long int n);
 int print_unsigned_int(unsigned long int n);
+void print_err_1(char *shell_name, char *command);
 
 /* strings */
 int _strlen(char *s);
@@ -27,6 +28,7 @@ char **_strsplit(char *str, const char *delim);
 char *_strconcat(char **array_of_strings, const char *delim);
 
 /* shell*/
+char *get_location(char *command);
 char *read_line(void);
 
 #endif

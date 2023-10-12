@@ -20,7 +20,8 @@ int main(int ac, char **av)
 	{
 		/* run shell in non interactive mode*/
 		command = _strconcat(av + 1, " ");
-		printf("command is : %s\n", command);
+		(void)command;
+		print_err_1(av[0], av[1]);
 		status = 1;
 	}
 	else

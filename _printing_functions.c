@@ -79,3 +79,16 @@ int print_unsigned_int(unsigned long int n)
 	printed_characters++;
 	return (printed_characters);
 }
+
+/**
+ * print_err_1 - function.
+ * @shell_name: shell_name.
+ * @command: command.
+ */
+void print_err_1(char *shell_name, char *command)
+{
+	print_string(shell_name);
+	print_string(": 1: ");
+	print_string(command);
+	print_string(": not found\n");
+}

@@ -12,7 +12,7 @@ char *read_line(void)
 	line = NULL;
 	n = 0;
 	number_of_chars = getline(&line, &n, stdin);
-	if (number_of_chars == -1)
+	if (number_of_chars == (size_t)-1)
 	{
 		free(line);
 		return (NULL);

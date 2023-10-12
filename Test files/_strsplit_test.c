@@ -8,16 +8,13 @@ int main()
 	int i;
 
 	/* testing _strsplit */
-	string = getenv("PATH");
-	;
-	array = _strsplit(string, ";");
+	string = "hello anas";
+	array = _strsplit(string, " ");
 
-	for (i = 0;; i++)
+	for (i = 0; array[i]; i++)
 	{
 		printf("pointer in index %d is	: %p\n", i, array[i]);
 		printf("string in index %d is	: %s\n", i, array[i]);
-		if (array[i] == NULL)
-			break;
 	}
 	return (1);
 }

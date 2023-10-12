@@ -28,7 +28,7 @@ char **_strsplit(char *str, const char *delim);
 char *_strconcat(char **array_of_strings, const char *delim);
 
 /* shell*/
-char *get_location(char *command);
+char *_get_location(char *command);
 char *read_line(void);
 
 #endif

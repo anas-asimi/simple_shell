@@ -65,8 +65,30 @@ char *_get_location(char *command)
  * @command: command
  * Return: int.
  */
-int run_command(char *command)
+int run_command(char **token)
 {
-	print_string(command);
+	int pid;
+	char *location;
+
+	location = _get_location(token[0]);
+	if (location == NULL)
+		return (1);
+
+	printf("%s\n", location);
+	pid = fork();
+	if (pid == 0)
+	{
+		printf("I'm the child");
+		/*
+		execve(location, token + 1);
+		*/
+	}
+	else
+	{
+		printf("I'm the parent, my child is %i", pid);
+		/*
+		wait();
+		*/
+	}
 	return (0);
 }

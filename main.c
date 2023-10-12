@@ -10,7 +10,6 @@
 int main(int ac, char **av)
 {
 	int status;
-	char *command;
 	char *line;
 	char **tokens;
 
@@ -19,8 +18,7 @@ int main(int ac, char **av)
 	if (ac >= 2)
 	{
 		/* run shell in non interactive mode*/
-		command = _strconcat(av + 1, " ");
-		status = run_command(command);
+		status = run_command(av + 1);
 		if (status == 1)
 			print_err(av[0], av[1]);
 	}
@@ -34,7 +32,7 @@ int main(int ac, char **av)
 				break;
 
 			tokens = _strsplit(line, " ");
-			status = run_command(line);
+			status = run_command(tokens);
 			if (status == 1)
 				print_err(av[0], tokens[0]);
 			free(line);

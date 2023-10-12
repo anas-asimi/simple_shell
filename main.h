@@ -13,6 +13,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <stddef.h>
+#include <sys/wait.h>
 
 /* printing */
 int _putchar(char c);

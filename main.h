@@ -31,5 +31,6 @@ char *_strconcat(char **array_of_strings, const char *delim);
 char *_get_location(char *command);
 char *read_line(void);
 int run_command(char **token);
+void free_array(char **array);
 
 #endif

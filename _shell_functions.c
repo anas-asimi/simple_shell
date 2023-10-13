@@ -21,6 +21,20 @@ char *read_line(void)
 }
 
 /**
+ * free_array - read input.
+ * Return: string.
+ */
+void free_array(char **array)
+{
+	int i;
+
+	i = 0;
+	while (array[i])
+		free(array[i++]);
+	free(array);
+}
+
+/**
  * _get_location - get location of command.
  * @command: command
  * Return: int.

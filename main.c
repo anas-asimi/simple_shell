@@ -35,6 +35,7 @@ int main(int ac, char **av)
 			if (status == 1)
 				print_err(av[0], tokens[0]);
 			free(line);
+			free_array(tokens);
 		}
 	}
 	_putchar('\n');

@@ -13,27 +13,25 @@ int main(int ac, char **av)
 	char *line;
 	char **tokens;
 
-	(void)ac;
+	printf("ac is : %d\n", ac);
 	if (ac >= 2)
 	{
-		/* run shell in non interactive mode*/
 		status = run_command(av + 1);
 		if (status == 1)
 			print_err(av[0], av[1]);
+		_putchar('\n');
+		return (status);
 	}
-	else
+	while (1)
 	{
-		while (1)
-		{
-			print_string("#cisfun$ ");
-			line = read_line();
-			if (line == NULL)
-				break;
-			tokens = _strsplit(line, " ");
-			status = run_command(tokens);
-			if (status == 1)
-				print_err(av[0], tokens[0]);
-		}
+		print_string("#cisfun$ ");
+		line = read_line();
+		if (line == NULL)
+			break;
+		tokens = _strsplit(line, " ");
+		status = run_command(tokens);
+		if (status == 1)
+			print_err(av[0], tokens[0]);
 	}
 	_putchar('\n');
 	return (status);

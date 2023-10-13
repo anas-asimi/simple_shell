@@ -6,7 +6,8 @@
  */
 char *read_line(void)
 {
-	char *line;
+	int i;
+	char *line, *line_copy;
 	size_t number_of_chars, n;
 
 	line = NULL;
@@ -17,7 +18,11 @@ char *read_line(void)
 		free(line);
 		return (NULL);
 	}
-	return (line);
+	line_copy = malloc(sizeof(char) * number_of_chars);
+	for (i = 0; line[i] != '\n'; i++)
+		line_copy[i] = line[i];
+	free(line);
+	return (line_copy);
 }
 
 /**
@@ -80,7 +85,8 @@ char *_get_location(char *command)
  */
 int run_command(char **token)
 {
-	int pid;
+	pid_t pid;
+	int status;
 	char *location;
 
 	location = _get_location(token[0]);
@@ -89,18 +95,8 @@ int run_command(char **token)
 
 	pid = fork();
 	if (pid == 0)
-	{
-		printf("I'm the child\n");
-		/*
-		execve(location, token + 1);
-		*/
-	}
+		execve(location, token, NULL);
 	else
-	{
-		printf("I'm the parent\n");
-		/*
-		wait();
-		*/
-	}
-	return (0);
+		waitpid(pid, &status, 0);
+	return (status);
 }

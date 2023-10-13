@@ -6,7 +6,7 @@ int main()
 	char *string;
 	char **token;
 
-	string = "gcc --version";
+	string = "ls --version";
 	token = _strsplit(string, " ");
 	printf("command : %s\n", token[0]);
 	status = run_command(token);

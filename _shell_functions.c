@@ -6,8 +6,7 @@
  */
 char *read_line(void)
 {
-	int i;
-	char *line, *line_copy;
+	char *line;
 	size_t number_of_chars, n;
 
 	line = NULL;
@@ -18,11 +17,8 @@ char *read_line(void)
 		free(line);
 		return (NULL);
 	}
-	line_copy = malloc(sizeof(char) * number_of_chars);
-	for (i = 0; line[i] != '\n'; i++)
-		line_copy[i] = line[i];
-	free(line);
-	return (line_copy);
+	line[number_of_chars - 1] = '\0';
+	return (line);
 }
 
 /**
@@ -46,7 +42,7 @@ void free_array(char **array)
  */
 char *_get_location(char *command)
 {
-	char *path, *path_token, *file_path;
+	char *path, *path_copy, *path_token, *file_path;
 	char *array_of_strings[3];
 	struct stat buffer;
 
@@ -54,7 +50,8 @@ char *_get_location(char *command)
 	if (path == NULL)
 		return (NULL);
 
-	path_token = strtok(path, ":");
+	path_copy = _strcpy(path);
+	path_token = strtok(path_copy, ":");
 	while (path_token != NULL)
 	{
 		array_of_strings[0] = path_token;
@@ -93,9 +90,12 @@ int run_command(char **token)
 	if (location == NULL)
 		return (1);
 
+	fflush(stdout);
 	pid = fork();
 	if (pid == 0)
+	{
 		execve(location, token, NULL);
+	}
 	else
 		waitpid(pid, &status, 0);
 	return (status);

@@ -1,13 +1,16 @@
 #include "../main.h"
-#include "../_strings_functions.c"
-#include "../_printing_functions.c"
 
-int main(int ac, char **av)
+int main(void)
 {
-	char *string;
+	char *line;
+	char **tokens;
 
-	(void)ac;
-	string = _strconcat(av + 1, " ");
-	printf("string : %s\n", string);
-	return (1);
+	while (1)
+	{
+		line = read_line();
+		tokens = _strsplit(line, " ");
+		printf("line after is : %s\n", line);
+	}
+	free(line);
+	return (0);
 }

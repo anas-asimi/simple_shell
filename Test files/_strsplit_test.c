@@ -7,20 +7,17 @@ int main()
 	int i;
 
 	/* testing _strsplit */
-	string = "hello anas";
+	string = "123 456 \\ 789";
 	array = _strsplit(string, " ");
 
 	for (i = 0; array[i]; i++)
 	{
-		printf("pointer in index %d is	: %p\n", i, array[i]);
 		printf("string in index %d is	: %s\n", i, array[i]);
 	}
+	printf("string before is		: %s\n", string);
+	string = "abc def \\ ghi";
 	array = _strsplit(string, " ");
-	array = _strsplit(string, " ");
-	array = _strsplit(string, " ");
-	array = _strsplit(string, " ");
-	array = _strsplit(string, " ");
-	array = _strsplit(string, " ");
-	printf("string is		: %s\n", string);
-	return (1);
+	printf("string after is			: %s\n", string);
+
+	return (0);
 }

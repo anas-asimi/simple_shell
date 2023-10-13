@@ -3,13 +3,13 @@
 int main()
 {
 	int status;
-	char *string;
+	char *command;
 	char **token;
 
-	string = "ls --version";
-	token = _strsplit(string, " ");
-	printf("command : %s\n", token[0]);
+	command = "whoami";
+	printf("command is : %s\n", command);
+	token = _strsplit("whoami", " ");
 	status = run_command(token);
 	printf("status : %d\n", status);
-	return (1);
+	return (0);
 }

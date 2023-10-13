@@ -2,12 +2,14 @@
 
 int main()
 {
-	char *string;
+	char *command;
+	char *location;
 
-	/* testing _strsplit */
-	string = _get_location("gcc");
-	if (string == NULL)
+	command = "make";
+	location = _get_location(command);
+	if (command == NULL)
 		printf("command not found");
-	printf("command is : %s\n", string);
-	return (1);
+	printf("command is : %s\n", command);
+	printf("location is : %s\n", location);
+	return (0);
 }

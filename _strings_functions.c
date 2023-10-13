@@ -46,13 +46,13 @@ char **_strsplit(char *str, const char *delim)
 	int i, total_of_strings;
 	char **array;
 	char *token;
-	char *srt_copy1;
-	char *srt_copy2;
+	char *str_copy1;
+	char *str_copy2;
 
-	srt_copy1 = _strcpy(str);
-	srt_copy2 = _strcpy(str);
+	str_copy1 = _strcpy(str);
+	str_copy2 = _strcpy(str_copy1);
 
-	token = strtok(srt_copy1, delim);
+	token = strtok(str_copy1, delim);
 	while (token != NULL)
 	{
 		total_of_strings++;
@@ -64,7 +64,7 @@ char **_strsplit(char *str, const char *delim)
 	if (array == NULL)
 		return (NULL);
 
-	token = strtok(srt_copy2, delim);
+	token = strtok(str_copy2, delim);
 	for (i = 0; token != NULL; i++)
 	{
 		array[i] = malloc(sizeof(char) * _strlen(token));
@@ -72,8 +72,8 @@ char **_strsplit(char *str, const char *delim)
 		token = strtok(NULL, delim);
 	}
 	array[i] = NULL;
-	free(srt_copy1);
-	free(srt_copy2);
+	free(str_copy1);
+	free(str_copy2);
 	return (array);
 }
 

@@ -15,6 +15,7 @@ int main()
 	print_string("\n");
 	result = _strconcat(array, "/");
 	print_string(result);
+	print_string("\n");
 
-	return (1);
+	return (0);
 }

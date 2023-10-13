@@ -15,5 +15,12 @@ int main()
 		printf("pointer in index %d is	: %p\n", i, array[i]);
 		printf("string in index %d is	: %s\n", i, array[i]);
 	}
+	array = _strsplit(string, " ");
+	array = _strsplit(string, " ");
+	array = _strsplit(string, " ");
+	array = _strsplit(string, " ");
+	array = _strsplit(string, " ");
+	array = _strsplit(string, " ");
+	printf("string is		: %s\n", string);
 	return (1);
 }

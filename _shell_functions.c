@@ -23,6 +23,7 @@ char *read_line(void)
 
 /**
  * free_array - read input.
+ * @array: array
  * Return: string.
  */
 void free_array(char **array)
@@ -77,7 +78,7 @@ char *_get_location(char *command)
 
 /**
  * run_command - run command.
- * @command: command
+ * @token: command as token
  * Return: int.
  */
 int run_command(char **token)

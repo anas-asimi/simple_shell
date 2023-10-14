@@ -81,11 +81,11 @@ int print_unsigned_int(unsigned long int n)
 }
 
 /**
- * print_err - function.
+ * print_error - function.
  * @shell_name: shell_name.
  * @command: command.
  */
-void print_err(char *shell_name, char *command)
+void print_error(char *shell_name, char *command)
 {
 	print_string(shell_name);
 	print_string(": 1: ");

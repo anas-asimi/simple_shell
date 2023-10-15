@@ -9,7 +9,7 @@ int main()
 	command = "whoami";
 	printf("command is : %s\n", command);
 	token = _strsplit("whoami", " ");
-	status = run_command(token);
+	status = _execute(token);
 	printf("status : %d\n", status);
 	return (0);
 }

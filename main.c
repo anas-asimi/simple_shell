@@ -10,33 +10,38 @@
 int main(int ac, char **av)
 {
 	int status;
-	char *line;
-	char **tokens;
+	char *command;
+	char **command_as_token;
 
 	(void)ac;
 	if (isatty(STDIN_FILENO)) /* shell is running in interactive mode*/
 	{
 		while (1)
 		{
-			print_string("#cisfun$ ");
-			line = read_line();
-			if (line == NULL)
+			print_prompt();
+			command = read_line();
+			if (command == NULL)
+			{
+				_putchar('\n');
 				break;
-			tokens = _strsplit(line, " ");
-			status = run_command(tokens);
+			}
+			command_as_token = _strsplit(command, " \n");
+			status = _execute(command_as_token);
+			free(command);
+			free_array(command_as_token);
 			if (status == 1)
-				print_error(av[0], tokens[0]);
+				perror(av[0]);
 		}
 	}
 	else /* shell is running in non interactive mode*/
 	{
-		printf("ac is : %d\n", ac);
-		printf("av[1] is : %s\n", av[0]);
-		return (0);
-		status = run_command(av + 1);
+		command = read_stream();
+		command_as_token = _strsplit(command, " \n");
+		status = _execute(command_as_token);
+		free(command);
+		free_array(command_as_token);
 		if (status == 1)
-			print_error(av[0], av[1]);
+			perror(av[0]);
 	}
-	_putchar('\n');
 	return (status);
 }

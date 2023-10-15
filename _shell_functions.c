@@ -7,17 +7,15 @@
 char *read_line(void)
 {
 	char *line;
-	size_t number_of_chars, n;
+	size_t bufsize;
 
 	line = NULL;
-	n = 0;
-	number_of_chars = getline(&line, &n, stdin);
-	if (number_of_chars == (size_t)-1)
+	bufsize = 0;
+	if (getline(&line, &bufsize, stdin) == -1)
 	{
 		free(line);
 		return (NULL);
 	}
-	line[number_of_chars - 1] = '\0';
 	return (line);
 }
 
@@ -77,11 +75,11 @@ char *_get_location(char *command)
 }
 
 /**
- * run_command - run command.
+ * _execute - run command.
  * @token: command as token
  * Return: int.
  */
-int run_command(char **token)
+int _execute(char **token)
 {
 	pid_t pid;
 	int status;
@@ -100,4 +98,52 @@ int run_command(char **token)
 	else
 		waitpid(pid, &status, 0);
 	return (status);
+}
+
+/**
+ * read_stream - read a line from the stream
+ *
+ * Return: pointer that points the the read line
+ */
+char *read_stream(void)
+{
+	int bufsize = 1024;
+	int i = 0;
+	char *line = malloc(sizeof(char) * bufsize);
+	int character;
+
+	if (line == NULL)
+	{
+		fprintf(stderr, "allocation error in read_stream");
+		exit(EXIT_FAILURE);
+	}
+	while (1)
+	{
+		character = getchar(); /* read first char from stream */
+		if (character == EOF)
+		{
+			free(line);
+			exit(EXIT_SUCCESS);
+		}
+		else if (character == '\n')
+		{
+			line[i] = '\0';
+			return (line);
+		}
+		else
+		{
+			line[i] = character;
+		}
+		i++;
+		if (i >= bufsize)
+		{
+			bufsize += bufsize;
+			line = realloc(line, bufsize);
+			if (line == NULL)
+			{
+				fprintf(stderr, "reallocation error in read_stream");
+				exit(EXIT_FAILURE);
+			}
+		}
+	}
 }

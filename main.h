@@ -21,6 +21,7 @@ int print_string(char *s);
 int print_number(long int n);
 int print_unsigned_int(unsigned long int n);
 void print_error(char *shell_name, char *command);
+void print_prompt();
 
 /* strings */
 int _strlen(char *s);
@@ -31,7 +32,8 @@ char *_strconcat(char **array_of_strings, const char *delim);
 /* shell*/
 char *_get_location(char *command);
 char *read_line(void);
-int run_command(char **token);
+char *read_stream(void);
+int _execute(char **token);
 void free_array(char **array);
 
 #endif

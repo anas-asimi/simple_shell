@@ -94,9 +94,9 @@ void print_error(char *shell_name, char *command)
 }
 
 /**
- * print_prompt - function.
+ * print_prompt - print the prompt.
  */
-void print_prompt()
+void print_prompt(void)
 {
 	print_string("$ ");
 }

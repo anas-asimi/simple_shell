@@ -36,4 +36,7 @@ char *read_stream(void);
 int _execute(char **token);
 void free_array(char **array);
 
+/* global variables */
+extern char **environ;
+
 #endif

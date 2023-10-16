@@ -26,7 +26,7 @@ void print_prompt();
 /* strings */
 int _strlen(char *s);
 char *_strcpy(char *src);
-char **_strsplit(char *str, const char *delim);
+char **_strsplit(char *string, const char *delimiter);
 char *_strconcat(char **array_of_strings, const char *delim);
 
 /* shell*/

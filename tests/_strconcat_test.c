@@ -2,20 +2,19 @@
 
 int main()
 {
+	char *array[4];
 	char *string;
-	char *result;
-	char **array;
+	int i;
 
-	/* testing _strsplit */
-	string = "hello world its me";
-	array = _strsplit(string, " ");
+	array[0] = "hello";
+	array[1] = "world";
+	array[2] = "Again!";
+	array[3] = NULL;
 
-	result = _strconcat(array, " ");
-	print_string(result);
-	print_string("\n");
-	result = _strconcat(array, "/");
-	print_string(result);
-	print_string("\n");
+	string = _strconcat(array, " ");
+	printf("string is : [%s]\n", string);
+
+	free(string);
 
 	return (0);
 }

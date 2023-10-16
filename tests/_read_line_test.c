@@ -3,13 +3,10 @@
 int main()
 {
 	char *string;
-	int i;
 
-	while (1)
-	{
-		printf("#cisfun$ ");
-		string = read_line();
-		printf("string : %s\n", string);
-	}
+	string = read_line();
+	printf("string : %s\n", string);
+	free(string);
+	
 	return (0);
 }

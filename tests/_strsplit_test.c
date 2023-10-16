@@ -6,18 +6,11 @@ int main()
 	char **array;
 	int i;
 
-	/* testing _strsplit */
-	string = "123 456 \\ 789";
+	string = "hello world its me";
 	array = _strsplit(string, " ");
-
 	for (i = 0; array[i]; i++)
-	{
-		printf("string in index %d is	: %s\n", i, array[i]);
-	}
-	printf("string before is		: %s\n", string);
-	string = "abc def \\ ghi";
-	array = _strsplit(string, " ");
-	printf("string after is			: %s\n", string);
+		printf("word is : [%s]\n", array[i]);
 
+	free_array(array);
 	return (0);
 }

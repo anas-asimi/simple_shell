@@ -84,7 +84,6 @@ int _execute(char **token)
 	pid_t pid;
 	int status;
 	char *location;
-	extern char **environ;
 
 	location = _get_location(token[0]);
 	if (location == NULL)

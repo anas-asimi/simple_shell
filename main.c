@@ -14,12 +14,12 @@ int main(int ac, char **av)
 	char **command_as_token;
 
 	(void)ac;
-	if (isatty(STDIN_FILENO)) /* shell is running in interactive mode*/
+	if (isInteractive()) /* shell is running in interactive mode */
 	{
 		while (1)
 		{
-			print_string("$ ");
-			command = read_line();
+			print_string("#cisfun$ ");
+			command = read_stream();
 			if (command == NULL)
 			{
 				_putchar('\n');
@@ -29,18 +29,23 @@ int main(int ac, char **av)
 			status = _execute(command_as_token);
 			free(command);
 			free_array(command_as_token);
-			if (status == 1)
+			if (status != EXIT_SUCCESS)
 				perror(av[0]);
 		}
 	}
-	else /* shell is running in non interactive mode*/
+	else /* shell is running in non interactive mode */
 	{
 		command = read_stream();
+		if (command == NULL)
+		{
+			perror(av[0]);
+			return (EXIT_FAILURE);
+		}
 		command_as_token = _strsplit(command, " \n");
 		status = _execute(command_as_token);
 		free(command);
 		free_array(command_as_token);
-		if (status == 1)
+		if (status != EXIT_SUCCESS)
 			perror(av[0]);
 	}
 	return (status);

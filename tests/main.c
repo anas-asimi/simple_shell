@@ -6,11 +6,9 @@
  */
 int main(void)
 {
-	char *line;
-	while (1)
-	{
-		line = readFromStdin();
-		printf("line after is : %s\n", line);
-	}
+	char c;
+
+	c = _getchar();
+	_putchar(c);
 	return (0);
 }

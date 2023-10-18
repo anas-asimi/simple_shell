@@ -18,9 +18,6 @@
 /* printing */
 int _putchar(char c);
 int print_string(char *s);
-int print_number(long int n);
-int print_unsigned_int(unsigned long int n);
-void print_error(char *shell_name, char *command);
 
 /* strings */
 int _strlen(char *s);
@@ -32,9 +29,9 @@ char *_strconcat(char **array_of_strings, const char *delim);
 char *_get_location(char *command);
 char *read_line(void);
 char *read_stream(void);
-char *_getline(void);
 int _execute(char **token);
 void free_array(char **array);
+int isInteractive(void);
 
 /* global variables */
 extern char **environ;

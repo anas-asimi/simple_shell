@@ -2,9 +2,9 @@
 #define HEADER_FILE
 
 /*
-#include <stdarg.h>
-#include <limits.h>
-#include <stdint.h>
+ * #include <stdarg.h>
+ * #include <limits.h>
+ * #include <stdint.h>
 */
 #include <sys/types.h>
 #include <sys/stat.h>

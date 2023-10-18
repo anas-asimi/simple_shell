@@ -1,129 +1,129 @@
 # PANTHEON (The Unbreakable Spear, The Aspect of War, The Spear of Targon)
 
--   In battle, we are reborn.
--   Flee, and the spear will find your back.
--   I fight until the blood takes the spear from my grasp, until I can only crawl. And even then, you will not defeat me, even then, I will spit in your face!
--   The heavens do not fear me because I am a god, they fear me because I am a man!
--   Let this day be legend.
--   My name is Soldier. By my spear, they will know war.
--   They are called gods, but when they die you cannot hear their howls above the wind.
--   Brother to warriors resting beneath wheat. Son of battles a thousand times lost. I know who I am, and I will show the gods what I can become!
--   Shields defend hearts. Both yours, and those beside you.
--   I will turn the dragons' power against them, drive it deep beneath scale... this, I promise.
--   Here ends the age of dragons!
--   We cry out to the heavens... and they answer in wing and flame.
--   A dragon looms, its wings beating the song of battle... calling us to war!
--   Aatrox has slaughtered gods. But now, he faces a man.
--   It is not why I fight, but who I fight for.
--   I cast my excuses into the dirt.
--   The earth is beneath me.
--   Onward! The spear points in only one direction.
--   Even impaled on a blade, I will press forward!.
--   We live our lives in the shadow cast by a mountain.
--   Death is the only thing that ever embraced me.
--   We are what we overcome.
--   A clashing of steel... I have heard it all go silent.
--   I wield my fate as a weapon!
--   There is no pity, no mercy.
--   Pressing forward is not the same as running from your mistakes.
--   Spears grow restless before fields of wheat.
--   If they bleed, I will call them sister or brother.
--   The world moves as the heavens lie still.
--   Because we fall, the climb must be our destination.
--   I wear a helm so that I am only a soldier.
--   I will carve my scars into the heavens.
--   I buried regret in a grave, along with my name.
--   The power of these 'gods' is but an echo of our own.
--   I do not set the pace, I race against it.
--   The past marches with me.
--   There are no enemies, no allies. Only those about to die.
--   From the skies they see war, but on earth there is only carnage.
--   The art of war is hearing your heart beating, knowing you are alive!
--   If they kill me, at least I die a man.
--   I am the tip of the spear, raised against surrender!
--   I have found my limit a thousand times, and still I press further.
--   The people cry out for strength that is already theirs!
--   How much further could we march, if we were not forced to carry our fears on our backs?
--   The twilight of the gods comes each morning, when our world shines brighter than the stars.
--   We must all find our place. Mine is being cast down, so I can rise once more!
--   We are privileged to breathe, to taste the air! It is the last gasp of all who have died before us.
--   We are caught between Darkin and Aspect, but we will rise up in spite of them.
--   The stars are beyond my reach, and so I grasp my spear and take aim.
--   When I look to the mountain's peak, in my mind, I have already fallen. And so, I climb.
--   Heavier than my spear is the weight of only one life.
--   After every defeat, I ran around the mountain until even shame could not keep up.
--   The man who tastes the venom of gods, must spit his words.
--   The mountain before me is not always high. Heh, it is not always a mountain.
--   Vengeance is cold. I do not need it on the mountain.
--   Behind me lies a farm. I wonder if there is bread above the hearth, and if I will ever return.
--   Face me.
--   We bleed into the same earth, and bleed we must.
--   Why do you fight?
--   Aatrox would drown the world in blood just to stain the heavens.
--   Aatrox! The World Ender. But from death, comes life.
--   The power you sought has destroyed you, Aatrox. You will find no other end.
--   I am not the Pantheon you knew, creature. I am Atreus, a mortal, about to slay a dragon!
--   I once trusted my destiny to the stars, dragon. Now, I trust in steel.
--   The Lunari do not need a god. They need a leader.
--   Battle is a dance, and the fortunate find their partner.
--   You preach movement, while anchoring our souls.
--   Kayn. Either the weapon is redundant, or you are.
--   Hide behind your faith, Solari, and the robes of your priests.
--   Beneath Aspect and armor, you are more resilient than you know.
--   While you bow to the sun, my spear finds your neck.
--   If only your kind could see what you see, Soraka, they would weep for you as you weep for us.
--   You call yourself the Aspect of the Protector, but now the one in need is you.
--   If it isn't the Aspect everyone used to like.
--   I earned my spear with my brother's dying breath. How did you earn yours, Demacian?
--   I have faced many self proclaimed gods. The worst wears the face of a child.
--   You sought to become a god, and you were made their pet.
--   Parasite!
--   The blows of gods cannot shatter the world if they strike me instead!
--   Darkin or Aspect, it does not matter.
--   Gods need slaves, and they found you.
--   Is this a god, or a rug?
--   Our destiny is to fight, and only the bravest do not refuse it. I understand this, Lunari.
--   I am no more than a soldier, and no less.
--   I call upon the stars... to bake my bountiful breads!
--   Fresh from my bakery... my secret dream.
--   Cry, war! Louder!
--   Life was always a war.
--   A legion of one.
--   Before you fight, you must rise.
--   No mercy for the strong.
--   Until my spear dulls.
--   Let fear make you bold.
--   Strike now, strike harder!
--   Between each beat of my heart, I strike.
--   Into legend.
--   You can only defeat yourself.
--   Unbroken.
--   Willpower sets my spear alight.
--   Do not give up!
--   You will not fail if it is worth it.
--   Everything, or nothing.
--   Echo for eons.
--   Again!
--   Spear and shield. A pantheon.
--   Power will be your undoing.
--   Fight, because you must!
--   Stand up. Face me again.
--   Keep fighting.
--   How you die is who you are.
--   I will remember your name, and shout it to the heavens.
--   Glory fades into bloodstains.
--   How many hosts must I kill, Darkin?
--   The Darkin's final words are not their own... but the cries of humanity.
--   All things end!
--   Mortality can only be severed by the spear's edge.
--   The stars lie!
--   Return home on your shield.
--   I sought power on Targon's peak, only to find it within.
--   The best climbers know how to fall.
--   Retreat too far on Mount Targon, and you will fall off a cliff.
--   The god died. The man lives.
--   I will not surrender.
--   How many times must I die, before I learn to live?
--   The beyond can have me when I am done.
--   I will fall, at least one more time.
--   Stand back up and never be defeated.
+- In battle, we are reborn.
+- Flee, and the spear will find your back.
+- I fight until the blood takes the spear from my grasp, until I can only crawl. And even then, you will not defeat me, even then, I will spit in your face!
+- The heavens do not fear me because I am a god, they fear me because I am a man!
+- Let this day be legend.
+- My name is Soldier. By my spear, they will know war.
+- They are called gods, but when they die you cannot hear their howls above the wind.
+- Brother to warriors resting beneath wheat. Son of battles a thousand times lost. I know who I am, and I will show the gods what I can become!
+- Shields defend hearts. Both yours, and those beside you.
+- I will turn the dragons' power against them, drive it deep beneath scale... this, I promise.
+- Here ends the age of dragons!
+- We cry out to the heavens... and they answer in wing and flame.
+- A dragon looms, its wings beating the song of battle... calling us to war!
+- Aatrox has slaughtered gods. But now, he faces a man.
+- It is not why I fight, but who I fight for.
+- I cast my excuses into the dirt.
+- The earth is beneath me.
+- Onward! The spear points in only one direction.
+- Even impaled on a blade, I will press forward!.
+- We live our lives in the shadow cast by a mountain.
+- Death is the only thing that ever embraced me.
+- We are what we overcome.
+- A clashing of steel... I have heard it all go silent.
+- I wield my fate as a weapon!
+- There is no pity, no mercy.
+- Pressing forward is not the same as running from your mistakes.
+- Spears grow restless before fields of wheat.
+- If they bleed, I will call them sister or brother.
+- The world moves as the heavens lie still.
+- Because we fall, the climb must be our destination.
+- I wear a helm so that I am only a soldier.
+- I will carve my scars into the heavens.
+- I buried regret in a grave, along with my name.
+- The power of these 'gods' is but an echo of our own.
+- I do not set the pace, I race against it.
+- The past marches with me.
+- There are no enemies, no allies. Only those about to die.
+- From the skies they see war, but on earth there is only carnage.
+- The art of war is hearing your heart beating, knowing you are alive!
+- If they kill me, at least I die a man.
+- I am the tip of the spear, raised against surrender!
+- I have found my limit a thousand times, and still I press further.
+- The people cry out for strength that is already theirs!
+- How much further could we march, if we were not forced to carry our fears on our backs?
+- The twilight of the gods comes each morning, when our world shines brighter than the stars.
+- We must all find our place. Mine is being cast down, so I can rise once more!
+- We are privileged to breathe, to taste the air! It is the last gasp of all who have died before us.
+- We are caught between Darkin and Aspect, but we will rise up in spite of them.
+- The stars are beyond my reach, and so I grasp my spear and take aim.
+- When I look to the mountain's peak, in my mind, I have already fallen. And so, I climb.
+- Heavier than my spear is the weight of only one life.
+- After every defeat, I ran around the mountain until even shame could not keep up.
+- The man who tastes the venom of gods, must spit his words.
+- The mountain before me is not always high. Heh, it is not always a mountain.
+- Vengeance is cold. I do not need it on the mountain.
+- Behind me lies a farm. I wonder if there is bread above the hearth, and if I will ever return.
+- Face me.
+- We bleed into the same earth, and bleed we must.
+- Why do you fight?
+- Aatrox would drown the world in blood just to stain the heavens.
+- Aatrox! The World Ender. But from death, comes life.
+- The power you sought has destroyed you, Aatrox. You will find no other end.
+- I am not the Pantheon you knew, creature. I am Atreus, a mortal, about to slay a dragon!
+- I once trusted my destiny to the stars, dragon. Now, I trust in steel.
+- The Lunari do not need a god. They need a leader.
+- Battle is a dance, and the fortunate find their partner.
+- You preach movement, while anchoring our souls.
+- Kayn. Either the weapon is redundant, or you are.
+- Hide behind your faith, Solari, and the robes of your priests.
+- Beneath Aspect and armor, you are more resilient than you know.
+- While you bow to the sun, my spear finds your neck.
+- If only your kind could see what you see, Soraka, they would weep for you as you weep for us.
+- You call yourself the Aspect of the Protector, but now the one in need is you.
+- If it isn't the Aspect everyone used to like.
+- I earned my spear with my brother's dying breath. How did you earn yours, Demacian?
+- I have faced many self proclaimed gods. The worst wears the face of a child.
+- You sought to become a god, and you were made their pet.
+- Parasite!
+- The blows of gods cannot shatter the world if they strike me instead!
+- Darkin or Aspect, it does not matter.
+- Gods need slaves, and they found you.
+- Is this a god, or a rug?
+- Our destiny is to fight, and only the bravest do not refuse it. I understand this, Lunari.
+- I am no more than a soldier, and no less.
+- I call upon the stars... to bake my bountiful breads!
+- Fresh from my bakery... my secret dream.
+- Cry, war! Louder!
+- Life was always a war.
+- A legion of one.
+- Before you fight, you must rise.
+- No mercy for the strong.
+- Until my spear dulls.
+- Let fear make you bold.
+- Strike now, strike harder!
+- Between each beat of my heart, I strike.
+- Into legend.
+- You can only defeat yourself.
+- Unbroken.
+- Willpower sets my spear alight.
+- Do not give up!
+- You will not fail if it is worth it.
+- Everything, or nothing.
+- Echo for eons.
+- Again!
+- Spear and shield. A pantheon.
+- Power will be your undoing.
+- Fight, because you must!
+- Stand up. Face me again.
+- Keep fighting.
+- How you die is who you are.
+- I will remember your name, and shout it to the heavens.
+- Glory fades into bloodstains.
+- How many hosts must I kill, Darkin?
+- The Darkin's final words are not their own... but the cries of humanity.
+- All things end!
+- Mortality can only be severed by the spear's edge.
+- The stars lie!
+- Return home on your shield.
+- I sought power on Targon's peak, only to find it within.
+- The best climbers know how to fall.
+- Retreat too far on Mount Targon, and you will fall off a cliff.
+- The god died. The man lives.
+- I will not surrender.
+- How many times must I die, before I learn to live?
+- The beyond can have me when I am done.
+- I will fall, at least one more time.
+- Stand back up and never be defeated.

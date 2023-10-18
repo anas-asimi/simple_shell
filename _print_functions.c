@@ -92,11 +92,3 @@ void print_error(char *shell_name, char *command)
 	print_string(command);
 	print_string(": not found\n");
 }
-
-/**
- * print_prompt - print the prompt.
- */
-void print_prompt(void)
-{
-	print_string("$ ");
-}

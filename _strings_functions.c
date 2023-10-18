@@ -115,3 +115,21 @@ char *_strconcat(char **array_of_strings, const char *delim)
 	str[full_length] = '\0';
 	return (str);
 }
+
+/**
+ * _memcpy - _memcpy.
+ * Return: none.
+ */
+void _memcpy(void *destination, const void *source, size_t size)
+{
+	size_t i;
+	char *dest;
+	const char *src;
+
+	dest = (char *)destination;
+	src = (const char *)source;
+	for (i = 0; i < size; i++)
+	{
+		dest[i] = src[i];
+	}
+}

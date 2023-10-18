@@ -19,7 +19,7 @@ int main(int ac, char **av)
 		while (1)
 		{
 			print_string("#cisfun$ ");
-			command = read_stream();
+			command = _getline();
 			if (command == NULL)
 			{
 				_putchar('\n');
@@ -35,7 +35,7 @@ int main(int ac, char **av)
 	}
 	else /* shell is running in non interactive mode */
 	{
-		command = read_stream();
+		command = _getline();
 		if (command == NULL)
 		{
 			perror(av[0]);

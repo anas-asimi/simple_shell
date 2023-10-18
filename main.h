@@ -27,11 +27,13 @@ char *_strconcat(char **array_of_strings, const char *delim);
 
 /* shell*/
 char *_get_location(char *command);
-char *read_line(void);
-char *read_stream(void);
+char *_getline(void);
+char _getchar(void);
 int _execute(char **token);
 void free_array(char **array);
 int isInteractive(void);
+void *_realloc(void *ptr, size_t new_size);
+void _memcpy(void *destination, const void *source, size_t size);
 
 /* global variables */
 extern char **environ;

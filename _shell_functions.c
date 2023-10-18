@@ -1,35 +1,35 @@
 #include "main.h"
 
 /**
- * read_line - read input.
- * Return: string.
+ * getchar - get char from stdin.
+ * Return: character.
  */
-char *read_line(void)
+char _getchar(void)
 {
-	char *line;
-	size_t bufsize;
+	char buffer[1];
+	int bytesRead;
 
-	line = NULL;
-	bufsize = 0;
-	if (getline(&line, &bufsize, stdin) == -1)
-	{
-		free(line);
-		return (NULL);
-	}
-	return (line);
+	bytesRead = read(0, buffer, 1);
+	if (bytesRead != 1)
+		return (EOF);
+	return buffer[0];
 }
 
 /**
- * read_stream - read a line from the stream
+ * _getline - get a line from stdin
  *
  * Return: pointer that points the the read line
  */
-char *read_stream(void)
+char *_getline(void)
 {
-	int bufsize = 1024;
-	int i = 0;
-	char *line = malloc(sizeof(char) * bufsize);
 	int character;
+	int bufferSize;
+	int i;
+	char *line;
+
+	bufferSize = 1024;
+	i = 0;
+	line = malloc(sizeof(char) * bufferSize);
 
 	if (line == NULL)
 	{
@@ -38,7 +38,7 @@ char *read_stream(void)
 	}
 	while (1)
 	{
-		character = getchar();
+		character = _getchar();
 		if (character == EOF)
 		{
 			free(line);
@@ -54,10 +54,10 @@ char *read_stream(void)
 			line[i] = character;
 		}
 		i++;
-		if (i >= bufsize)
+		if (i >= bufferSize)
 		{
-			bufsize += bufsize;
-			line = realloc(line, bufsize);
+			bufferSize += bufferSize;
+			line = _realloc(line, bufferSize);
 			if (line == NULL)
 			{
 				perror("reallocation error in read_stream");

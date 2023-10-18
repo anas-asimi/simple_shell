@@ -2,6 +2,8 @@
 
 /**
  * _realloc - _realloc.
+ * @ptr: ptr
+ * @new_size: new_size
  * Return: pointer.
  */
 void *_realloc(void *ptr, size_t new_size)
@@ -12,13 +14,13 @@ void *_realloc(void *ptr, size_t new_size)
 	if (new_size == 0)
 	{
 		free(ptr);
-		return NULL;
+		return (NULL);
 	}
 
 	new_ptr = malloc(new_size);
 
 	if (new_ptr == NULL)
-		return NULL;
+		return (NULL);
 
 	if (ptr != NULL)
 	{
@@ -27,5 +29,5 @@ void *_realloc(void *ptr, size_t new_size)
 		free(ptr);
 	}
 
-	return new_ptr;
+	return (new_ptr);
 }

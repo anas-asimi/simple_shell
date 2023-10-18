@@ -4,13 +4,13 @@
  * main - entry point to the shell
  * Return: 0 on success, 1 on error
  */
-int main()
+int main(void)
 {
 	char *string;
 
-	string = read_line();
+	string = _getline();
 	printf("string : %s\n", string);
 	free(string);
-	
+
 	return (0);
 }

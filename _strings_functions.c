@@ -118,6 +118,9 @@ char *_strconcat(char **array_of_strings, const char *delim)
 
 /**
  * _memcpy - _memcpy.
+ * @destination: destination
+ * @source: source
+ * @size: size
  * Return: none.
  */
 void _memcpy(void *destination, const void *source, size_t size)

@@ -4,7 +4,7 @@
  * main - entry point to the shell
  * Return: 0 on success, 1 on error
  */
-int main()
+int main(void)
 {
 	char *command;
 	char *location;

@@ -14,5 +14,5 @@ int main(void)
 	f = fopen("/dev/zero", "r");
 	getline(&s, &n, f);
 
-	return 0;
+	return (0);
 }

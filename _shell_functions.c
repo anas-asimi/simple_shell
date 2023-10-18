@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * getchar - get char from stdin.
+ * _getchar - get char from stdin.
  * Return: character.
  */
 char _getchar(void)
@@ -12,7 +12,7 @@ char _getchar(void)
 	bytesRead = read(0, buffer, 1);
 	if (bytesRead != 1)
 		return (EOF);
-	return buffer[0];
+	return (buffer[0]);
 }
 
 /**
@@ -22,9 +22,7 @@ char _getchar(void)
  */
 char *_getline(void)
 {
-	int character;
-	int bufferSize;
-	int i;
+	int character, bufferSize, i;
 	char *line;
 
 	bufferSize = 1024;
@@ -50,9 +48,7 @@ char *_getline(void)
 			return (line);
 		}
 		else
-		{
 			line[i] = character;
-		}
 		i++;
 		if (i >= bufferSize)
 		{

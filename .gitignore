@@ -2,4 +2,4 @@
 # ignore executable files
 *.exe
 *.out
-shell
+hsh

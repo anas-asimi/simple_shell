@@ -18,7 +18,7 @@ int main(int ac, char **av)
 	{
 		while (1)
 		{
-			print_prompt();
+			print_string("$ ");
 			command = read_line();
 			if (command == NULL)
 			{

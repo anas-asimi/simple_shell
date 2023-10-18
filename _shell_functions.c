@@ -85,8 +85,7 @@ int _execute(char **token)
 	int status;
 	char *location;
 
-	/* location = _get_location(token[0]); */
-	location = token[0];
+	location = _get_location(token[0]);
 	if (location == NULL)
 		return (1);
 

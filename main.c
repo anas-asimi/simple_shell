@@ -18,7 +18,7 @@ int main(int ac, char **av)
 	{
 		while (1)
 		{
-			print_string("($) ");
+			print_string("$ ");
 			command = _getline();
 			if (command == NULL)
 			{

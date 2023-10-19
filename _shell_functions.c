@@ -87,7 +87,6 @@ char *_get_location(char *command)
 {
 	char *path, *path_copy, *path_token, *file_path;
 	char *array_of_strings[3];
-	struct stat buffer;
 
 	path = getenv("PATH");
 	if (path == NULL)
@@ -101,7 +100,7 @@ char *_get_location(char *command)
 		array_of_strings[1] = command;
 		array_of_strings[2] = NULL;
 		file_path = _strconcat(array_of_strings, "/");
-		if (stat(file_path, &buffer) == 0)
+		if (access(file_path, F_OK) == 0)
 		{
 			return (file_path);
 		}
@@ -111,7 +110,7 @@ char *_get_location(char *command)
 			path_token = strtok(NULL, ":");
 		}
 	}
-	if (stat(command, &buffer) == 0)
+	if (access(command, F_OK) == 0)
 	{
 		return (command);
 	}

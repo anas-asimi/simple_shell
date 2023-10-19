@@ -1,19 +1,14 @@
-#ifndef HEADER_FILE
-#define HEADER_FILE
+#ifndef MAIN_H
+#define MAIN_H
 
-/*
- * #include <stdarg.h>
- * #include <limits.h>
- * #include <stdint.h>
-*/
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <string.h>
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <stddef.h>
 #include <sys/wait.h>
+#include <errno.h>
+#include <string.h>
+#include <signal.h>
 
 /* printing */
 int _putchar(char c);

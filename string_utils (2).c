@@ -64,7 +64,7 @@ void _strgsplit(data *dt, const char *delim)
 		dt->argv = realloc(dt->argv, (ntoken + 2) * sizeof(char *));
 		if (dt->argv == NULL)
 			goto free;
-		dt->argv[ntoken] = _strg_dup(token);
+		dt->argv[ntoken] = _str_dup(token);
 		if (dt->argv[ntoken] == NULL)
 			goto free;
 		ntoken++;

@@ -98,7 +98,7 @@ void built_in_echo(data *dt)
 {
 	int i = 1, flag = 0, j = 0;
 
-	if (dt->agrv[1] == NULL)
+	if (dt->argv[1] == NULL)
 	{
 		write(STDOUT_FILENO, "\n", 1);
 		return;

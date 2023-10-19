@@ -13,7 +13,6 @@ int exec_built_in(data *dt)
 		{"setenv", setenv_built_in},
 		{"unsetenv", unsetenv_built_in},
 		{"cd", cd_built_in},
-		{"echo", echo_built_in},
 		{NULL, NULL},
 	};
 	int i = 0;
@@ -40,7 +39,7 @@ void exit_built_in(data *dt)
 
 	if (dt->argv[1])
 	{
-		if (dt->argv[1][0] != '-' && _isnumber(dt->argv[1]))
+		if (dt->argv[1][0] != '-' && _if_strg_num(dt->argv[1]))
 			dt->last_exit_status = atoi(dt->argv[1]);
 		else
 		{

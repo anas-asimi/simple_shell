@@ -64,7 +64,7 @@ void _exe_cmnd(data *dt)
 			_strgsplit(dt, " ");
 			if (!exec_built_in(dt))
 			{
-				_which(dt);
+				_cmnd_path(dt);
 				if (access(dt->argv[0], F_OK) == -1)
 				{
 					perror(dt->shell_name);

@@ -107,8 +107,17 @@ void built_in_echo(data *dt)
 		return;
 	for (i = 1; dt->argv[i] != NULL; i++)
 	{
-		if (_strgs_cmpr(dt->argv[1], "$", 1) == 0 || _strgs_cmpr(dt->argv[1], "$$", 2) == 0
-				|| _strgs_cmpr(dt->argv[1], "$?", 2) == 0)
+		if (_strgs_cmpr(dt->argv[1], "$", 1) == 0)
+		{
+			args_echo(dt->argv[1], dt->last_exit_status);
+			return;
+		}
+		if (__strgs_cmpr(dt->argv[1], "$$", 2) == 0)
+		{
+			args_echo(dt->argv[1], dt->last_exit_status);
+			return;
+		}
+		if (_strgs_cmpr(dt->argv[1], "$?", 2) == 0)
 		{
 			args_echo(dt->argv[1], dt->last_exit_status);
 			return;

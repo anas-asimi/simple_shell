@@ -97,7 +97,6 @@ void args_echo(char *index, int status)
 void built_in_echo(data *dt)
 {
 	int i = 1, flag = 0, j = 0;
-	int x, y, z;
 
 	if (dt->argv[1] == NULL)
 	{
@@ -108,10 +107,7 @@ void built_in_echo(data *dt)
 		return;
 	for (i = 1; dt->argv[i] != NULL; i++)
 	{
-		x = _strgs_cmpr(dt->argv[1], "$", 1) == 0;
-		y = _strgs_cmpr(dt->argv[1], "$$", 2) == 0;
-		z = _strgs_cmpr(dt->argv[1], "$?", 2) == 0;
-		if (x || y || z)
+		if (_strgs_cmpr(dt->argv[1], "$", 1) == 0 || _strgs_cmpr(dt->argv[1], "$$", 2) == 0 || _strgs_cmpr(dt->argv[1], "$?", 2) == 0)
 		{
 			args_echo(dt->argv[1], dt->last_exit_status);
 			return;

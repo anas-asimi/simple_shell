@@ -35,14 +35,11 @@ char *_get_env_var(char *key)
  */
 int _cmnd_path(data *dt)
 {
-	char *token, *path, *paths;
+	char *token, *path,
+		*paths = malloc(_strg_len(_get_env_var("PATH") ? _get_env_var("PATH") : "") + 1);
 	size_t token_len;
 	int find = -1;
 
-	paths = malloc(_strg_len(_get_env_var("PATH")
-								 ? _get_env_var("PATH")
-								 : "") +
-				   1);
 	if (!_get_env_var("PATH"))
 		goto step_out;
 	_strg_copy(paths, _get_env_var("PATH"));
@@ -103,7 +100,7 @@ char *crt_new(char *key, char *valeur)
  */
 char **new_env(char *key, char *valeur)
 {
-	int env_len = 0, i = 0, x, y;
+	int env_len = 0, i = 0;
 	char *entry_n;
 	char **new_environ;
 
@@ -114,6 +111,7 @@ char **new_env(char *key, char *valeur)
 		return (NULL);
 	new_environ = _get_env_var(key) ? malloc((env_len + 1) * sizeof(char *))
 									: malloc((env_len + 2) * sizeof(char *));
+
 	if (!new_environ)
 	{
 		free(entry_n);
@@ -128,9 +126,7 @@ char **new_env(char *key, char *valeur)
 			free(entry_n);
 			return (NULL);
 		}
-		x = strncmp(environ[i], key, strlen(key)) == 0;
-		y = environ[i][strlen(key)] == '=';
-		if (x && y)
+		if (strncmp(environ[i], key, strlen(key)) == 0 && environ[i][strlen(key)] == '=')
 			_strg_copy(new_environ[i], entry_n);
 		else
 			_strg_copy(new_environ[i], environ[i]);

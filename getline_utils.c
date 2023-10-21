@@ -33,8 +33,9 @@ ssize_t _getline(char **strlip, size_t *strsiz, FILE *stream)
 	static size_t buffersize, bufferpos;
 	char *newbuffer;
 
-	if (strlip == NULL || strsiz == NULL || stream == NULL
-		|| _sizeto_getline(strlip, strsiz) == -1)
+	if (strlip == NULL || strsiz == NULL || stream == NULL)
+		return (-1);
+	if (_sizeto_getline(strlip, strsiz) == -1)
 		return (-1);
 	while (1)
 	{

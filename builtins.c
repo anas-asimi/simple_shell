@@ -60,9 +60,9 @@ void args_echo(char *index, int status)
 		write(STDOUT_FILENO, "\n", 1);
 		return;
 	}
-	if (_strgs_cmpr(index, "$", 1) == 0)
+	if (_strcmp(index, "$", 1) == 0)
 	{
-		value = _get_env_var(index + 1);
+		value = _get_EV(index + 1);
 		if (value != NULL)
 		{
 			write(STDOUT_FILENO, value, _strg_len(value));
@@ -70,7 +70,7 @@ void args_echo(char *index, int status)
 			return;
 		}
 	}
-	if (_strgs_cmpr(index, "$$", 2) == 0)
+	if (_strcmp(index, "$$", 2) == 0)
 	{
 		value = _intgtostrg(getpid());
 		write(STDOUT_FILENO, value, _strg_len(value));
@@ -78,7 +78,7 @@ void args_echo(char *index, int status)
 		free(value);
 		return;
 	}
-	if (_strgs_cmpr(index, "$?", 2) == 0)
+	if (_strcmp(index, "$?", 2) == 0)
 	{
 		value = _intgtostrg(status);
 		write(STDOUT_FILENO, value, _strg_len(value));
@@ -96,18 +96,21 @@ void args_echo(char *index, int status)
 
 void built_in_echo(data *dt)
 {
-	int i = 1, flag = 0, j = 0;
+	int i = 1, flag = 0, j = 0, x, y, z;
 
 	if (dt->argv[1] == NULL)
 	{
 		write(STDOUT_FILENO, "\n", 1);
 		return;
 	}
-	if (_strgs_cmpr(dt->argv[0], "echo", 4) != 0)
+	if (_strcmp(dt->argv[0], "echo", 4) != 0)
 		return;
 	for (i = 1; dt->argv[i] != NULL; i++)
 	{
-		if (_strgs_cmpr(dt->argv[1], "$", 1) == 0 || _strgs_cmpr(dt->argv[1], "$$", 2) == 0 || _strgs_cmpr(dt->argv[1], "$?", 2) == 0)
+		x = _strcmp(dt->argv[1], "$", 1) == 0;
+		y = _strcmp(dt->argv[1], "$$", 2) == 0;
+		z = _strcmp(dt->argv[1], "$?", 2) == 0;
+		if (x || y || z)
 		{
 			args_echo(dt->argv[1], dt->last_exit_status);
 			return;

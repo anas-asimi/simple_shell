@@ -41,13 +41,13 @@ int _strg_cmpr(const char *strg1, const char *strg2)
 }
 
 /**
- * _strgs_cmpr - this function compares two strings with a number
+ * _strcmp - this function compares two strings with a number
  * @strg1: string 1
  * @strg2: string 2
  * @n: how many char you want compare
  * Return: the result
  */
-int _strgs_cmpr(const char *strg1, const char *strg2, int n)
+int _strcmp(const char *strg1, const char *strg2, int n)
 {
 	int i;
 	int res = 0;

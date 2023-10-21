@@ -45,8 +45,14 @@ void _trim_strg(char *strg)
 
 	strg[j] = '\0';
 
-	for (i = _strg_len(strg) - 1; i > 0 && (strg[i] == ' ' || strg[i] == '\t'); i--)
-		strg[i] = '\0';
+	for (i = _strg_len(strg) - 1;; i--)
+	{
+		if (i > 0 && (strg[i] == ' ' || strg[i] == '\t'))
+		{
+			strg[i] = '\0';
+		}
+		break;
+	}
 }
 
 /**

@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * _get_env_var - is the function that get the environment variable.
+ * _get_EV - is the function that get the environment variable.
  * @key: is the key of the variable
  * Return: value of an environment variable
  */
 
-char *_get_env_var(char *key)
+char *_get_EV(char *key)
 {
 	int i = -1;
 	size_t key_len;
@@ -20,7 +20,7 @@ char *_get_env_var(char *key)
 
 	while (environ[++i])
 	{
-		if (!_strgs_cmpr(environ[i], key, key_len) && environ[i][key_len] == '=')
+		if (!_strcmp(environ[i], key, key_len) && environ[i][key_len] == '=')
 		{
 			return (environ[i] + key_len + 1);
 		}
@@ -35,14 +35,14 @@ char *_get_env_var(char *key)
  */
 int _cmnd_path(data *dt)
 {
-	char *token, *path,
-		*paths = malloc(_strg_len(_get_env_var("PATH") ? _get_env_var("PATH") : "") + 1);
+	char *token, *path, *paths;
 	size_t token_len;
 	int find = -1;
 
-	if (!_get_env_var("PATH"))
+	paths = malloc(_strg_len(_get_EV("PATH") ? _get_EV("PATH") : "") + 1);
+	if (!_get_EV("PATH"))
 		goto step_out;
-	_strg_copy(paths, _get_env_var("PATH"));
+	_strg_copy(paths, _get_EV("PATH"));
 	if (paths == NULL)
 		goto step_out;
 	token = strtok(paths, ":");
@@ -100,18 +100,16 @@ char *crt_new(char *key, char *valeur)
  */
 char **new_env(char *key, char *valeur)
 {
-	int env_len = 0, i = 0;
-	char *entry_n;
-	char **new_environ;
+	int env_len = 0, i = 0, x, y;
+	char *entry_n, **new_environ;
 
 	while (environ[env_len])
 		env_len++;
 	entry_n = crt_new(key, valeur);
 	if (entry_n == NULL)
 		return (NULL);
-	new_environ = _get_env_var(key) ? malloc((env_len + 1) * sizeof(char *))
-									: malloc((env_len + 2) * sizeof(char *));
-
+	new_environ = _get_EV(key) ? malloc((env_len + 1) * sizeof(char *))
+							   : malloc((env_len + 2) * sizeof(char *));
 	if (!new_environ)
 	{
 		free(entry_n);
@@ -126,12 +124,14 @@ char **new_env(char *key, char *valeur)
 			free(entry_n);
 			return (NULL);
 		}
-		if (strncmp(environ[i], key, strlen(key)) == 0 && environ[i][strlen(key)] == '=')
+		x = strncmp(environ[i], key, strlen(key)) == 0;
+		y = environ[i][strlen(key)] == '=';
+		if (x && y)
 			_strg_copy(new_environ[i], entry_n);
 		else
 			_strg_copy(new_environ[i], environ[i]);
 	}
-	if (!_get_env_var(key))
+	if (!_get_EV(key))
 	{
 		new_environ[env_len] = entry_n;
 		new_environ[env_len + 1] = NULL;

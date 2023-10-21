@@ -53,11 +53,11 @@ void cd_built_in(data *dt)
 
 	if (dt->argv[1] == NULL)
 	{
-		targ_dir = _get_env_var("HOME");
+		targ_dir = _get_EV("HOME");
 	}
 	else if (strcmp(dt->argv[1], "-") == 0)
 	{
-		targ_dir = _get_env_var("OLDPWD");
+		targ_dir = _get_EV("OLDPWD");
 		if (targ_dir == NULL)
 		{
 			write(STDERR_FILENO, "OLDPWD not set\n", 14);

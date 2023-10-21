@@ -68,13 +68,13 @@ char *_str_dup(const char *strg);
 int _if_strg_num(const char *status);
 int _if_char_num(int c);
 
-char *_get_env_var(char *key);
+char *_get_EV(char *key);
 int _cmnd_path(data *dt);
 int _set_env(data *dt, char *key, char *valeur);
 
 unsigned int _strg_len(char *strg);
 int _strg_cmpr(const char *strg1, const char *strg2);
-int _strgs_cmpr(const char *strg1, const char *strg2, int n);
+int _strcmp(const char *strg1, const char *strg2, int n);
 char *_strg_copy(char *dest, const char *src);
 char *_strg_cat(char *dest, const char *src);
 

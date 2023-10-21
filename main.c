@@ -3,7 +3,6 @@
 /**
  * main - is the main function that lance the program
  * @argc: is number of @argv
- * @d: is data
  * @argv: is an array of arguments
  * Return: Always 0.
  */

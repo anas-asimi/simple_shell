@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _prt_error : function that error print to stderr
+ * _prt_error - function that error print to stderr
  * @sr1: name of shell program
  * @sr2: the error message
  * Return: void
@@ -27,7 +27,6 @@ void _prt_error(const char *sr1, const char *sr2)
 	write(STDERR_FILENO, "\n", 1);
 }
 
-
 /**
  * _trim_strg - is the function that trim a string with spces or tabs
  * @strg: the string to trim
@@ -41,15 +40,18 @@ void _trim_strg(char *strg)
 	for (i = 0; i < len && (strg[i] == ' ' || strg[i] == '\t'); i++)
 		;
 
-	for (j = 0; i < len ; i++, j++)
+	for (j = 0; i < len; i++, j++)
 		strg[j] = strg[i];
 
 	strg[j] = '\0';
 
-	for (i = _strg_len(strg) - 1; i > 0 && (strg[i] == ' ' || strg[i] == '\t'); i--)
+	for (i = _strg_len(strg) - 1;; i--)
+	{
+		if (i > 0 && (strg[i] == ' ' || strg[i] == '\t'))
+			break;
 		strg[i] = '\0';
+	}
 }
-
 
 /**
  * _fuc_realloc - is my function of realloc

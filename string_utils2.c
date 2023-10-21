@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strg_dup - returns a pointer to a newly allocated space in memory,
+ * _str_dup - returns a pointer to a newly allocated space in memory,
  * which contains a copy of the string given as a parameter.
  * @strg: string input
  * Return: pointer
@@ -30,7 +30,7 @@ char *_str_dup(const char *strg)
 }
 
 /**
- * _if_char_num : check if charachter is number
+ * _if_char_num - check if charachter is number
  * @c: charachter
  * Return: 1 if its a digit 0 otherwise
  */
@@ -42,7 +42,7 @@ int _if_char_num(int c)
 
 
 /**
- * _if_strg_num : check if a string is a number
+ * _if_strg_num - check if a string is a number
  * @status: string to be checked
  * Return: void
  */

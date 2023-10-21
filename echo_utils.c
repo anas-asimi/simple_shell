@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * exec_built_in :  function that run the built in functions
+ * exec_built_in - function that run the built in functions
  * @dt: is the data
  * Return: 1 if built in, 0 if not
  */
@@ -29,7 +29,7 @@ int exec_built_in(data *dt)
 }
 
 /**
- * exit_built_in : fucntion to exit the shell
+ * exit_built_in - fucntion to exit the shell
  * @dt: is the data
  * Return: void
  */
@@ -57,7 +57,7 @@ void exit_built_in(data *dt)
 }
 
 /**
- * env_built_in :  function that prints the environment
+ * env_built_in - function that prints the environment
  * @d: is the data
  * Return: void
  */
@@ -74,7 +74,7 @@ void env_built_in(data *d)
 	}
 }
 /**
- * setenv_built_in :  function that add a environment variable
+ * setenv_built_in - function that add a environment variable
  * @d: is the data
  * Return: void
  */
@@ -92,7 +92,7 @@ void setenv_built_in(data *d)
 }
 
 /**
- * unsetenv_built_in :  functioin that remove an environment variable
+ * unsetenv_built_in -  functioin that remove an environment variable
  * @d: is the data
  * Return: void
  */

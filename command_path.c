@@ -96,16 +96,15 @@ char *crt_new(char *key, char *valeur)
 }
 
 /**
- * new_env : is the functio for the new environ
+ * new_env - is the functio for the new environ
  * @key: is the key
  * @valeur: is the value of the variabl
  * Return: void
  */
 char **new_env(char *key, char *valeur)
 {
-	int env_len = 0, i = 0;
-	char *entry_n;
-	char **new_environ;
+	int env_len = 0, i = 0, x, y;
+	char *entry_n, **new_environ;
 
 	while (environ[env_len])
 		env_len++;
@@ -114,7 +113,6 @@ char **new_env(char *key, char *valeur)
 		return (NULL);
 	new_environ = _get_env_var(key) ? malloc((env_len + 1) * sizeof(char *))
 									: malloc((env_len + 2) * sizeof(char *));
-
 	if (!new_environ)
 	{
 		free(entry_n);
@@ -129,7 +127,9 @@ char **new_env(char *key, char *valeur)
 			free(entry_n);
 			return (NULL);
 		}
-		if (strncmp(environ[i], key, strlen(key)) == 0 && environ[i][strlen(key)] == '=')
+		x = strncmp(environ[i], key, strlen(key)) == 0;
+		y = environ[i][strlen(key)] == '=';
+		if (x && y)
 			_strg_copy(new_environ[i], entry_n);
 		else
 			_strg_copy(new_environ[i], environ[i]);
@@ -145,7 +145,7 @@ char **new_env(char *key, char *valeur)
 }
 
 /**
- * _set_env : is the function to set a new value to key
+ * _set_env - is the function to set a new value to key
  * @dt: is the data
  * @key: is the key
  * @valeur: is the value of the variable

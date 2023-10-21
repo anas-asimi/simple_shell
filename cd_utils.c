@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * chang_dire : is the function that change the directory, pwd and oldpwd
+ * chang_dire - is the function that change the directory, pwd and oldpwd
  * @targ_dir: is dir where the user want cd to it
  */
 
@@ -43,7 +43,7 @@ void chang_dire(char *targ_dir)
 }
 
 /**
- * cd_built_in : is the function that get the dir that the user want it
+ * cd_built_in - is the function that get the dir that the user want it
  * @dt: is the data
  */
 

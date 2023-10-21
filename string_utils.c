@@ -68,7 +68,7 @@ int _strgs_cmpr(const char *strg1, const char *strg2, int n)
 }
 
 /**
- * _strg_copy : copy strg (src) to dest .
+ * _strg_copy - copy strg (src) to dest .
  * @dest: input char *
  * @src: input const char *
  * Return: char *
